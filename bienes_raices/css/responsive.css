@@ -1,0 +1,92 @@
+@media (min-width:768px) {
+    .boton {
+        display: inline-block;
+        flex: 0 0 auto;
+    }
+
+    .contenido-header { text-align: left; }
+
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        /*Alinea contenido de manera horizontal*/
+        align-content: center;
+        /*Alinea contenido de manera vertical*/
+    }
+
+    .navegacion a {
+        display: inline-block;
+        font-size: 2rem;
+    }
+
+    .navegacion a:last-of-type { margin-right: 0; }
+
+    .iconos-nosotros {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .icono { flex-basis: calc(33.3% - 1rem); }
+
+    .contenedor-anuncio {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        /*Determina si los elementos hijos deben estar en un misma linea o no*/
+    }
+
+    .anuncio {
+        flex: 0 0 calc(33.3% - 1rem);
+        /*flex-grow, flex.shrink y flex-basis en un enunciado
+          FLEX-SHRINK Indica si los elementos se encogen o no
+          FLEX-GROW Indica si los elementos crecen más o no*/
+    }
+
+    .ver-todas {
+        display: flex;
+        justify-content: center;
+    }
+
+    .seccion-inferior {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .seccion-inferior .blog { flex-basis: 60%; }
+
+    .seccion-inferior .testimoniales { flex-basis: calc(40% - 2rem); }
+
+    .entrada-blog {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .entrada-blog .imagen-blog { flex-basis: 60%; }
+
+    .entrada-blog .texto-entrada { flex-basis: calc(40% - 2rem); }
+
+    .contenedor-footer {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .contenedor-footer nav {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .contenedor-footer nav a { margin: 0 1rem 0 0; }
+
+    /*NOSOTROS*/
+    .contenido-nosotros {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        /*Se puede cambiar 50% por 1 fr, lo cual es el diminutivo de ""fracción"" en este caso da 1 fracción a los hijos del elemento padre, y divide el 100% entre el número de elementos*/
+        grid-column-gap: 2rem;
+    }
+
+    /*ANUNCIOS*/
+    .contenido-anuncio h3 { font-size: 2.4rem; }
+
+    /*BLOG*/
+}
