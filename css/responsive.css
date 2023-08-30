@@ -1,4 +1,77 @@
-@media (min-width:768px) {
+@media (min-width: 280px) {
+    /* HEADER AND NAVBAR */
+    .barra {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .barra .navegacion {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 20px;
+        gap: 10px 0;
+        align-items: center;
+    }
+
+    .barra .navegacion a {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    /* CASAS Y DEPARTAMENTOS HOME */
+    .contenedor.seccion.casas-departamentos {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contenedor.seccion.casas-departamentos .ver-todas {
+        text-align: center;
+    }
+
+    /* CONTACTO HOME */
+    .imagen-contacto {
+        padding: 3rem 0;
+    }
+
+    /* INICIO */
+    .iconos-caracteristicas li {
+        align-items: center;
+        gap: 0 5px;
+    }
+
+    .iconos-caracteristicas li img {
+        margin-right: 0;
+    }
+
+    /* PANTALLA ANUNCIOS */
+    .contenedor-anuncio .anuncio {
+        flex: 0 0 calc(100%);
+        /*flex-grow, flex.shrink y flex-basis en un enunciado
+          FLEX-SHRINK Indica si los elementos se encogen o no
+          FLEX-GROW Indica si los elementos crecen más o no*/
+    }
+
+    /* PROPIEDAD */
+    .contenedor .resumen-propiedad {
+        flex-direction: column;
+    }
+
+    .contenedor .resumen-propiedad .iconos-caracteristicas {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 768px) {
+    /* HEADER AND NAVBAR */
+    .barra .navegacion {
+        flex-direction: row;
+        gap: 0 10px;
+
+    }
+
     .boton {
         display: inline-block;
         flex: 0 0 auto;
@@ -7,7 +80,7 @@
     .contenido-header { text-align: left; }
 
     .barra {
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         /*Alinea contenido de manera horizontal*/
         align-content: center;
@@ -19,8 +92,6 @@
         font-size: 2rem;
     }
 
-    .navegacion a:last-of-type { margin-right: 0; }
-
     .iconos-nosotros {
         display: flex;
         justify-content: space-between;
@@ -30,13 +101,14 @@
 
     .contenedor-anuncio {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         flex-wrap: wrap;
+        gap: 0 20px;
         /*Determina si los elementos hijos deben estar en un misma linea o no*/
     }
 
-    .anuncio {
-        flex: 0 0 calc(33.3% - 1rem);
+    .contenedor-anuncio .anuncio {
+        flex: 0 0 calc(40%);
         /*flex-grow, flex.shrink y flex-basis en un enunciado
           FLEX-SHRINK Indica si los elementos se encogen o no
           FLEX-GROW Indica si los elementos crecen más o no*/
@@ -88,5 +160,24 @@
     /*ANUNCIOS*/
     .contenido-anuncio h3 { font-size: 2.4rem; }
 
-    /*BLOG*/
+    /*PROPIEDAD*/
+    .contenedor .resumen-propiedad {
+        flex-direction: row;
+    }
+
+    .contenedor .resumen-propiedad .iconos-caracteristicas {
+        display: contents;
+    }
+}
+
+@media (min-width: 1366px) {
+    .contenedor-anuncio {
+        gap: 0 10px;
+    }
+    .contenedor-anuncio .anuncio {
+        flex: 0 0 calc(33% - 1rem);
+        /*flex-grow, flex.shrink y flex-basis en un enunciado
+          FLEX-SHRINK Indica si los elementos se encogen o no
+          FLEX-GROW Indica si los elementos crecen más o no*/
+    }
 }

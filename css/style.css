@@ -30,6 +30,8 @@ h3 { font-size: 3rem; }
 
 h4 { font-size: 2.6rem; }
 
+p { font-size: 18px;}
+
 /*UTILIDADES*/
 .seccion {
     margin-top: 2rem;
@@ -65,9 +67,18 @@ h4 { font-size: 2.6rem; }
     border: none;
     display: inline-block;
     flex: 0 0 100%; /*flex-grow, flex-shrink, flx-basis*/
+    cursor: pointer;
 }
 
-.boton:hover { cursor: pointer; }
+.boton:hover {
+    background: #cc7a08;
+    transition: all ease-in-out 0.3s;
+}
+
+.boton.boton-verde:hover {
+    background: #609700;
+    transition: all ease-in-out 0.3s;
+}
 
 .boton-amarillo { background: #E08709; }
 
@@ -112,9 +123,13 @@ h4 { font-size: 2.6rem; }
     font-size: 1.8rem;
     margin-right: 2rem;
     display: block;
+    transition: all ease-in-out 0.3s;
 }
 
-.navegacion a:hover { color: rgb(255, 196, 0); }
+.navegacion a:hover {
+    color: rgb(255, 196, 0);
+    transition: all ease-in-out 0.3s;
+}
 
 /*ICONOS*/
 .icono { text-align: center; }
@@ -124,7 +139,7 @@ h4 { font-size: 2.6rem; }
 .icono img{ width: fit-content; }
 
 /*ANUNCIOS*/
-.anuncio {
+.contenedor-anuncio .anuncio {
     border: solid grey 0.1rem;
     background: #f5f5f5;
     margin-bottom: 2rem;
@@ -140,6 +155,7 @@ h4 { font-size: 2.6rem; }
 .precio {
     color: #71b100;
     font-weight: 700;
+    font-size: 16px;
 }
 
 .iconos-caracteristicas {
@@ -250,7 +266,15 @@ h4 { font-size: 2.6rem; }
     text-align: center;
 }
 
-.contenedor-footer nav a { margin-bottom: 1rem; }
+.contenedor-footer nav a {
+    margin-bottom: 1rem;
+    transition: all ease-in-out 0.3s;
+}
+
+.contenedor-footer nav a:hover {
+    color: rgb(255, 196, 0);
+    transition: all ease-in-out 0.3s;
+}
 
 .contenedor-footer .copyright { text-align: center; }
 
@@ -276,6 +300,11 @@ h4 { font-size: 2.6rem; }
 }
 
 /*CONTACTO*/
+form {
+    display: flex;
+    flex-direction: column;
+}
+
 legend {
     font-size: 2rem;
     font-weight: 900;
@@ -322,4 +351,18 @@ textarea { height: 20rem; }
     max-width: 40rem;
     display: flex;
     justify-content: space-between;
+}
+
+form input[type="submit"] {
+    width: fit-content;
+    margin-right: auto;
+    margin-left: auto;
+    transition: all ease-in-out 0.3s;
+
+}
+
+form input[type="submit"]:hover {
+    background: #609700;
+    transition: all ease-in-out 0.3s;
+
 }
